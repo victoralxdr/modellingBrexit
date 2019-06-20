@@ -1,0 +1,28 @@
+function [age, bias] = ageDistrib()
+            distrib = rand(1)*100;
+            
+            if distrib <= 11.9
+                age = randi([18 24]);
+                bias = -0.73;
+            end
+            if (distrib > 11.9) && (distrib <= 28.9)
+                age = randi([25 34]);
+                bias = -0.62;
+            end
+            if (distrib > 28.9) && (distrib <= 46.7)
+                age = randi([35 44]);
+                bias = -0.52;
+            end
+            if (distrib > 46.7) && (distrib <= 64.3)
+                age = randi([45 54]);
+                bias = -0.43;
+            end
+            if (distrib > 64.3) && (distrib <= 79.2)
+                age = randi([55 64]);
+                bias = -0.43;
+            end
+            if distrib > 79.2
+                age = randi([65 100]);
+                bias = -0.4;
+            end
+end
